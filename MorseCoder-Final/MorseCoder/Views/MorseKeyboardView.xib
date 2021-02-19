@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bMl-Sb-wKn" userLabel="View" customClass="MorseKeyboardView" customModule="MorseCoder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-m8-woJ" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="326" y="163" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="n9r-kQ-Roi"/>
+                    </constraints>
+                    <state key="normal" image="Backspace">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="deletePressed" destination="bMl-Sb-wKn" eventType="touchUpInside" id="nNA-fn-D1Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNk-m0-Led" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="8" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="W45">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="Ti6-pF-42g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTN-eo-qVW" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="55" y="163" width="265" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="4Zf-9A-VQH"/>
+                    </constraints>
+                    <state key="normal" title="space">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="spacePressed" destination="bMl-Sb-wKn" eventType="touchUpInside" id="e9A-FH-YDd"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgB-ba-hsG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                    <color key="backgroundColor" red="0.68235294120000001" green="0.70196078429999997" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="qjg-Qo-drY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pb-4e-Bbc" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="4" y="163" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="GJy-b0-bnK"/>
+                        <constraint firstAttribute="height" constant="45" id="Q0m-qA-haf"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="kwc-vT-Pa0"/>
+                        <constraint firstAttribute="width" constant="45" id="luU-Vb-6n7"/>
+                    </constraints>
+                    <state key="normal" image="NextKeyboard"/>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhj-05-eDb" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="46" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="E55">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="JTd-K3-CD3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGI-re-sfE" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="84" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="R83">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="oZB-O5-TRA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1i4-4w-k7Q" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="122" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="T64">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="r8c-Zt-9VT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvT-GI-mDR" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="160" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="Y59">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="hH0-iz-5iH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8q-e5-DVP" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="8" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="Screenshot 2021-02-20 at 01.07.19">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="f8s-MG-kWv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsx-qM-k8t" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="46" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="S52">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="uiz-xb-n5b"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wf-6j-xT8" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="84" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="D116">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="mHY-bx-YwC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJh-QK-5dC" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="122" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="F133-1">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="XYF-SL-SiI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY4-nG-ZNK" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="160" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="G22">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="ZPb-lC-YGD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb5-zV-rIG" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="104" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="Z136">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="nW4-8w-sOd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkY-mA-YeX" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="142" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="C51">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="ygR-xA-58w"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDI-35-Jcx" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="180" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="Screenshot 2021-02-20 at 01.49.07">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="lrM-bb-3Rg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9v-w3-oDn" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="218" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="N96">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="hsA-LY-nBo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ5-JZ-BtV" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="256" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="M63">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="y2F-2E-MPl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgs-Wc-66Y" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="198" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="U75">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="o5o-z0-Frb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QT1-fP-Q7Z" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="236" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="I30">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="pKy-He-oVW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePI-UE-pVV" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="274" y="53" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="O54">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="EFS-Ql-dTp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va4-71-J0P" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="29" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="P61">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="cmh-td-xe7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0e-Vc-P11" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="198" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="H63">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="XKw-j8-SOM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqf-US-Scy" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="236" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="J90">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="cCE-ze-v36"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgX-Of-1s3" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="274" y="91" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="Screenshot 2021-02-20 at 02.43.28">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="DfP-1i-cxo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDc-Vv-awT" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+                    <rect key="frame" x="67" y="129" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title=" fws" image="L73">
+                        <color key="titleColor" systemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="dotPressedWithButton:" destination="bMl-Sb-wKn" eventType="touchUpInside" id="j0k-93-zqp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="edC-ud-u82"/>
+            <constraints>
+                <constraint firstItem="BTN-eo-qVW" firstAttribute="leading" secondItem="edC-ud-u82" secondAttribute="leading" priority="750" constant="4" id="3Hi-2A-xzZ"/>
+                <constraint firstItem="BTN-eo-qVW" firstAttribute="bottom" secondItem="e2w-m8-woJ" secondAttribute="bottom" id="7lQ-ij-Ck5"/>
+                <constraint firstItem="edC-ud-u82" firstAttribute="bottom" secondItem="8Pb-4e-Bbc" secondAttribute="bottom" constant="5" id="Ocf-cn-aUz"/>
+                <constraint firstItem="e2w-m8-woJ" firstAttribute="leading" secondItem="BTN-eo-qVW" secondAttribute="trailing" constant="6" id="Qnp-IJ-Njb"/>
+                <constraint firstItem="e2w-m8-woJ" firstAttribute="height" secondItem="BTN-eo-qVW" secondAttribute="height" id="X58-be-w3B"/>
+                <constraint firstItem="YgB-ba-hsG" firstAttribute="trailing" secondItem="edC-ud-u82" secondAttribute="trailing" id="XO4-1i-4KL"/>
+                <constraint firstItem="edC-ud-u82" firstAttribute="bottom" secondItem="BTN-eo-qVW" secondAttribute="bottom" constant="5" id="Y4o-8E-n5T"/>
+                <constraint firstItem="BTN-eo-qVW" firstAttribute="leading" secondItem="8Pb-4e-Bbc" secondAttribute="trailing" constant="6" id="a9U-RG-MUM"/>
+                <constraint firstItem="YgB-ba-hsG" firstAttribute="top" secondItem="edC-ud-u82" secondAttribute="top" id="hLf-64-trO"/>
+                <constraint firstItem="edC-ud-u82" firstAttribute="trailing" secondItem="e2w-m8-woJ" secondAttribute="trailing" constant="4" id="tHY-s9-i2i"/>
+                <constraint firstItem="YgB-ba-hsG" firstAttribute="leading" secondItem="edC-ud-u82" secondAttribute="leading" id="wVT-m8-TBh"/>
+                <constraint firstItem="8Pb-4e-Bbc" firstAttribute="leading" secondItem="edC-ud-u82" secondAttribute="leading" constant="4" id="yOH-LI-Ub5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deleteButton" destination="e2w-m8-woJ" id="Uxb-6j-bgR"/>
+                <outlet property="nextKeyboardButton" destination="8Pb-4e-Bbc" id="thb-gp-vWj"/>
+                <outlet property="previewLabel" destination="YgB-ba-hsG" id="Q0L-50-Yxk"/>
+                <outlet property="spaceButtonToNextKeyboardConstraint" destination="a9U-RG-MUM" id="i3Y-NM-TOG"/>
+                <outlet property="spaceButtonToParentConstraint" destination="3Hi-2A-xzZ" id="Dni-Em-wea"/>
+            </connections>
+            <point key="canvasLocation" x="39.200000000000003" y="256.82158920539734"/>
+        </view>
+        <button opaque="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UUy-Zx-ezJ" customClass="KeyboardButton" customModule="MorseCoder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+            <state key="normal" title=" fws">
+                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            </state>
+            <connections>
+                <action selector="dashPressed" destination="bMl-Sb-wKn" eventType="touchUpInside" id="qYP-hT-JIj"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="399"/>
+        </button>
+    </objects>
+    <resources>
+        <image name="Backspace" width="24" height="18"/>
+        <image name="C51" width="420" height="398"/>
+        <image name="D116" width="352" height="350"/>
+        <image name="E55" width="390" height="382"/>
+        <image name="F133-1" width="436" height="462"/>
+        <image name="G22" width="436" height="384"/>
+        <image name="H63" width="472" height="416"/>
+        <image name="I30" width="296" height="314"/>
+        <image name="J90" width="464" height="348"/>
+        <image name="L73" width="402" height="370"/>
+        <image name="M63" width="538" height="410"/>
+        <image name="N96" width="532" height="396"/>
+        <image name="NextKeyboard" width="19" height="19"/>
+        <image name="O54" width="482" height="442"/>
+        <image name="P61" width="430" height="394"/>
+        <image name="R83" width="682" height="528"/>
+        <image name="S52" width="516" height="472"/>
+        <image name="Screenshot 2021-02-20 at 01.07.19" width="470" height="406"/>
+        <image name="Screenshot 2021-02-20 at 01.49.07" width="470" height="484"/>
+        <image name="Screenshot 2021-02-20 at 02.43.28" width="404" height="368"/>
+        <image name="T64" width="496" height="418"/>
+        <image name="U75" width="426" height="324"/>
+        <image name="W45" width="422" height="384"/>
+        <image name="Y59" width="626" height="626"/>
+        <image name="Z136" width="422" height="298"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
