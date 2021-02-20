@@ -124,6 +124,99 @@ extension MorseKeyboardView {
     addSignal(.dash)
   }
     
+    @IBAction func aPressed(){
+        addSignal(.a)
+    }
+    
+    @IBAction func bPressed(){
+        addSignal(.b)
+    }
+    
+    @IBAction func cPressed(){
+        addSignal(.c)
+    }
+    
+    @IBAction func dPressed(){
+        addSignal(.d)
+    }
+    
+    @IBAction func ePressed(){
+        addSignal(.e)
+    }
+    
+    @IBAction func fPressed(){
+        addSignal(.f)
+    }
+    
+    @IBAction func gPressed(){
+        addSignal(.g)
+    }
+    
+    @IBAction func hPressed(){
+        addSignal(.h)
+    }
+    
+    @IBAction func iPressed(){
+        addSignal(.i)
+    }
+    
+    @IBAction func jPressed(){
+        addSignal(.j)
+    }
+    
+    @IBAction func kPressed(){
+        addSignal(.k)
+    }
+    
+    @IBAction func lPressed(){
+        addSignal(.l)
+    }
+    
+    @IBAction func mPressed(){
+        addSignal(.m)
+    }
+    
+    @IBAction func nPressed(){
+        addSignal(.n)
+    }
+    
+    @IBAction func oPressed(){
+        addSignal(.o)
+    }
+    
+    @IBAction func pPressed(){
+        addSignal(.p)
+    }
+
+    @IBAction func rPressed(){
+        addSignal(.r)
+    }
+    
+    @IBAction func sPressed(){
+        addSignal(.s)
+    }
+    
+    @IBAction func tPressed(){
+        addSignal(.t)
+    }
+    
+    @IBAction func uPressed(){
+        addSignal(.u)
+    }
+    
+    @IBAction func wPressed(){
+        addSignal(.w)
+    }
+    
+    @IBAction func yPressed(){
+        addSignal(.y)
+    }
+    
+    @IBAction func zPressed(){
+        addSignal(.z)
+    }
+    
+    
     /*
      
      //I think I will need to add here all the letters and the actions eg. addSignal(.o)
