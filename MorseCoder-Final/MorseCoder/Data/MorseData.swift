@@ -36,38 +36,62 @@ struct MorseData {
     case dot = "."
     case dash = "-"
     case unknown = "?"
+    case a = "a"
+    case b = "b"
+    case c = "c"
+    case d = "d"
+    case e = "e"
+    case f = "f"
+    case g = "g"
+    case h = "h"
+    case i = "i"
+    case j = "j"
+    case k = "k"
+    case l = "l"
+    case m = "m"
+    case n = "n"
+    case o = "o"
+    case p = "p"
+    case r = "r"
+    case s = "s"
+    case t = "t"
+    case u = "u"
+    case w = "w"
+    case y = "y"
+    case z = "z"
+    
     //you need to add additional cases here to cover for different letters
     // once this is done
   }
 
   // Letter to morse signal dictionary
   static var code: [String: [Signal]] = [
-    "a": [.dot,.dash],
-    "b": [.dash,.dot,.dot,.dot],
-    "c": [.dash,.dot,.dash,.dot],
-    "d": [.dash,.dot,.dot],
-    "e": [.dot],
-    "f": [.dot,.dot,.dash,.dot],
-    "g": [.dash,.dash,.dot],
-    "h": [.dot,.dot,.dot,.dot],
-    "i": [.dot,.dot],
-    "j": [.dot,.dash,.dash,.dash],
-    "k": [.dash,.dot,.dash],
-    "l": [.dot,.dash,.dot,.dot],
-    "m": [.dash,.dash],
-    "n": [.dash,.dot],
-    "o": [.dash,.dash,.dash],
-    "p": [.dot,.dash,.dash,.dot],
+    "a": [.a],
+    "b": [.b],
+    "c": [.c],
+    "d": [.d],
+    "e": [.e],
+    "f": [.f],
+    "g": [.f],
+    "h": [.h],
+    "i": [.i],
+    "j": [.j],
+    "k": [.k],
+    "l": [.l],
+    "m": [.m],
+    "n": [.n],
+    "o": [.o],
+    "p": [.p],
     "q": [.dash,.dash,.dot,.dash],
-    "r": [.dot,.dash,.dot],
-    "s": [.dot,.dot,.dot],
-    "t": [.dash],
-    "u": [.dot,.dot,.dash],
-    "v": [.dot,.dot,.dot,.dash],
-    "w": [.dot,.dash,.dash],
-    "x": [.dash,.dot,.dot,.dash],
-    "y": [.dash,.dot,.dash,.dash],
-    "z": [.dash,.dash,.dot,.dot],
+    "r": [.r],
+    "s": [.s],
+    "t": [.t],
+    "u": [.u],
+    "v": [.dot],
+    "w": [.w],
+    "x": [.dot,.dot],
+    "y": [.y],
+    "z": [.z],
     "1": [.dot,.dash,.dash,.dash,.dash],
     "2": [.dot,.dot,.dash,.dash,.dash],
     "3": [.dot,.dot,.dot,.dash,.dash],
